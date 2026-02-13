@@ -66,7 +66,7 @@ export function InClauseBuilder() {
                             placeholder="123&#10;456&#10;789&#10;..."
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
-                            className="h-64 bg-slate-900/50 border-slate-600 text-slate-100 font-mono text-sm placeholder:text-slate-500 resize-none"
+                            className="h-64 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                         />
                     </div>
 
@@ -146,7 +146,7 @@ export function InClauseBuilder() {
                             readOnly
                             value={output}
                             placeholder="IN ('123', '456', '789')"
-                            className="h-64 bg-slate-900/50 border-slate-600 text-emerald-400 font-mono text-sm placeholder:text-slate-500 resize-none"
+                            className="h-64 bg-slate-950 border-slate-700 text-green-400 font-mono text-sm placeholder:text-slate-500 resize-none"
                         />
                     </div>
                 </div>

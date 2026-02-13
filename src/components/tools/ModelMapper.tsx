@@ -124,7 +124,7 @@ export function ModelMapper() {
                                     <select
                                         value={dataType}
                                         onChange={(e) => setDataType(e.target.value as CSharpDataType)}
-                                        className="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-md text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-md text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     >
                                         {csharpDataTypes.map((type) => (
                                             <option key={type} value={type}>{type}</option>
@@ -160,7 +160,7 @@ export function ModelMapper() {
                             readOnly
                             value={output}
                             placeholder="UserId&#10;CreatedAt&#10;OrderStatus&#10;..."
-                            className="h-64 bg-slate-900/50 border-slate-600 text-emerald-400 font-mono text-sm placeholder:text-slate-500 resize-none"
+                            className="h-64 bg-slate-950 border-slate-700 text-green-400 font-mono text-sm placeholder:text-slate-400 resize-none"
                         />
                     </div>
                 </div>

@@ -1,47 +1,49 @@
 # QuickDev (QuickQuery Web)
 
-**QuickDev** is a developer productivity suite ported from the QuickQuery WPF application to the web using **Next.js 14**, **Tailwind CSS**, and **Shadcn/UI**.
+**QuickDev**는 기존 C# WPF 애플리케이션인 QuickQuery를 **Next.js 14**, **Tailwind CSS**, **Shadcn/UI**를 사용하여 웹으로 포팅한 개발자 생산성 도구 모음입니다.
 
-## 🚀 Features
+## 🚀 주요 기능
 
-### 1. 📋 Smart IN-Clause Generator
-- Converts newline-separated values (e.g., from Excel) into SQL `IN (...)` clauses.
-- user-selectable separator (comma `,` or pipe `|`).
-- **Oracle Mode**: Automatically splits lists larger than 1000 items into multiple `OR column IN (...)` blocks.
+### 1. 📋 스마트 IN절 생성기 (Smart IN-Clause Generator)
+- 엑셀 등에서 복사한 여러 줄의 값을 SQL `IN (...)` 절로 변환합니다.
+- 구분자 선택 가능 (콤마 `,` 또는 파이프 `|`).
+- **Oracle 모드**: 1000개가 넘는 값은 자동으로 분할하여 `OR column IN (...)` 형태로 생성합니다.
 
-### 2. 📝 CRUD Generator
-- Generates basic SQL boilerplate (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) from a table name and column list.
-- Supports **SQL Server** (`@param`) and **Oracle** (`:param`) parameter styles.
+### 2. 📝 CRUD 생성기 (CRUD Generator)
+- 테이블 명과 컬럼 목록만 입력하면 기본 쿼리문(`SELECT`, `INSERT`, `UPDATE`, `DELETE`)을 자동으로 생성해줍니다.
+- **MSSQL** (`@param`) 및 **Oracle** (`:param`) 파라미터 스타일을 지원합니다.
 
-### 3. 🔄 Model Mapper
-- Converts database column names (`snake_case`) to C# Property names (`PascalCase`).
-- Generates numeric/string property definitions.
+### 3. 🔄 모델 매퍼 (Model Mapper)
+- 데이터베이스 컬럼명(`snake_case`)을 C# 프로퍼티명(`PascalCase`)으로 변환합니다.
+- 자동으로 `public type Name { get; set; }` 형태의 코드를 생성합니다.
 
-### 4. 🔗 Query Interpolator
-- Replaces SQL placeholders (`?`, `@p0`, `:1`) with actual parameter values for debugging.
-- Handy for taking a parameterized query from logs and making it runnable in a DB tool.
+### 4. 🔗 쿼리 인터폴레이터 (Query Interpolator)
+- 로그에서 캡처한 파라미터화된 쿼리(`?`, `@p0`, `:1`)를 실제 값으로 치환해줍니다.
+- DB 툴에서 바로 실행 가능한 형태로 만들어 디버깅을 돕습니다.
 
-## 🛠️ Tech Stack
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + Shadcn/UI
-- **Icons**: Lucide React
-- **Deployment**: Vercel
+## 🛠️ 기술 스택
+- **프레임워크**: Next.js 14 (App Router)
+- **언어**: TypeScript
+- **스타일링**: Tailwind CSS + Shadcn/UI
+- **아이콘**: Lucide React
+- **배포**: Vercel
 
-## 📦 Getting Started
+## 📦 시작하기
+
+로컬에서 실행하려면 다음 명령어를 사용하세요:
 
 ```bash
 npm run dev
-# Open http://localhost:3000
+# 브라우저에서 http://localhost:3000 접속
 ```
 
-## ☁️ Deployment
+## ☁️ 배포 (Vercel)
 
-This project is optimized for deployment on **Vercel** (the creators of Next.js).
-- **Pricing**: Vercel is **FREE** for personal/hobby projects (Hobby Tier).
-- **Limits**: Generous limits for bandwidth and build minutes, suitable for this type of tool.
-- **HTTPS**: Automatic free SSL.
+이 프로젝트는 **Vercel** 배포에 최적화되어 있습니다.
+- **비용**: 개인 프로젝트(Hobby Plan)는 **무료**입니다.
+- **HTTPS**: 무료 SSL 인증서가 자동 적용됩니다.
 
 ```bash
 npx vercel
 ```
+

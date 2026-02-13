@@ -67,7 +67,7 @@ export function QueryInterpolator() {
                                 placeholder="SELECT * FROM users WHERE id = ? AND status = ?"
                                 value={sqlInput}
                                 onChange={(e) => setSqlInput(e.target.value)}
-                                className="h-32 bg-slate-900/50 border-slate-600 text-slate-100 font-mono text-sm placeholder:text-slate-500 resize-none"
+                                className="h-32 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                             />
                         </div>
                         <div className="space-y-2">
@@ -76,7 +76,7 @@ export function QueryInterpolator() {
                                 placeholder="123&#10;active&#10;..."
                                 value={paramsInput}
                                 onChange={(e) => setParamsInput(e.target.value)}
-                                className="h-28 bg-slate-900/50 border-slate-600 text-slate-100 font-mono text-sm placeholder:text-slate-500 resize-none"
+                                className="h-28 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                             />
                         </div>
                     </div>
@@ -141,7 +141,7 @@ export function QueryInterpolator() {
                             readOnly
                             value={output}
                             placeholder="SELECT * FROM users WHERE id = '123' AND status = 'active'"
-                            className="h-64 bg-slate-900/50 border-slate-600 text-emerald-400 font-mono text-sm placeholder:text-slate-500 resize-none"
+                            className="h-64 bg-slate-950 border-slate-700 text-green-400 font-mono text-sm placeholder:text-slate-500 resize-none"
                         />
                     </div>
                 </div>

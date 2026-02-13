@@ -69,7 +69,7 @@ export function CrudGenerator() {
                                 placeholder="users"
                                 value={tableName}
                                 onChange={(e) => setTableName(e.target.value)}
-                                className="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-md text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-md text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                         </div>
                         <div className="space-y-2">
@@ -78,7 +78,7 @@ export function CrudGenerator() {
                                 placeholder="id&#10;name&#10;email&#10;created_at"
                                 value={columnsInput}
                                 onChange={(e) => setColumnsInput(e.target.value)}
-                                className="h-44 bg-slate-900/50 border-slate-600 text-slate-100 font-mono text-sm placeholder:text-slate-500 resize-none"
+                                className="h-44 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                             />
                         </div>
                     </div>
@@ -155,7 +155,7 @@ export function CrudGenerator() {
                             readOnly
                             value={output}
                             placeholder="SELECT&#10;    id,&#10;    name&#10;FROM users&#10;WHERE 1=1"
-                            className="h-64 bg-slate-900/50 border-slate-600 text-emerald-400 font-mono text-sm placeholder:text-slate-500 resize-none"
+                            className="h-64 bg-slate-950 border-slate-700 text-green-400 font-mono text-sm placeholder:text-slate-500 resize-none"
                         />
                     </div>
                 </div>

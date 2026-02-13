@@ -1,0 +1,87 @@
+"use client";
+
+import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Toaster } from "@/components/ui/sonner";
+import { InClauseBuilder } from "@/components/tools/InClauseBuilder";
+import { CrudGenerator } from "@/components/tools/CrudGenerator";
+import { ModelMapper } from "@/components/tools/ModelMapper";
+import { QueryInterpolator } from "@/components/tools/QueryInterpolator";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Toaster position="top-right" richColors />
+
+      {/* Header */}
+      <header className="border-b border-slate-700/50 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Q</span>
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-white">QuickDev</h1>
+              <p className="text-sm text-slate-400">Developer Productivity Tools</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <Tabs defaultValue="in-clause" className="w-full">
+          <TabsList className="grid w-full grid-cols-4 bg-slate-800/50 border border-slate-700/50 p-1 rounded-xl mb-6">
+            <TabsTrigger
+              value="in-clause"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
+            >
+              IN-Clause
+            </TabsTrigger>
+            <TabsTrigger
+              value="crud"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
+            >
+              CRUD
+            </TabsTrigger>
+            <TabsTrigger
+              value="mapper"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
+            >
+              Model Mapper
+            </TabsTrigger>
+            <TabsTrigger
+              value="interpolator"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
+            >
+              Interpolator
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="in-clause">
+            <InClauseBuilder />
+          </TabsContent>
+
+          <TabsContent value="crud">
+            <CrudGenerator />
+          </TabsContent>
+
+          <TabsContent value="mapper">
+            <ModelMapper />
+          </TabsContent>
+
+          <TabsContent value="interpolator">
+            <QueryInterpolator />
+          </TabsContent>
+        </Tabs>
+      </div>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-700/50 mt-12">
+        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-slate-500 text-sm">
+          QuickDev © 2026 — Developer Productivity Tools
+        </div>
+      </footer>
+    </main>
+  );
+}

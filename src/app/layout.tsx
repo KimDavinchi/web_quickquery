@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "QuickQuery",
   description: "Developer Productivity Tools - SQL Builder, CRUD, Mapper, Interpolator",
+  other: {
+    "google-adsense-account": "ca-pub-4402129586982373",
+  },
 };
 
 export default function RootLayout({

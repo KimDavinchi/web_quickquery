@@ -7,6 +7,7 @@ import { InClauseBuilder } from "@/components/tools/InClauseBuilder";
 import { CrudGenerator } from "@/components/tools/CrudGenerator";
 import { ModelMapper } from "@/components/tools/ModelMapper";
 import { QueryInterpolator } from "@/components/tools/QueryInterpolator";
+import AdSenseBanner from "@/components/AdSenseBanner";
 
 export default function Home() {
   return (
@@ -55,6 +56,8 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </div>
+
+      <AdSenseBanner />
 
       {/* Footer */}
       <footer className="border-t border-slate-700/50 mt-12">

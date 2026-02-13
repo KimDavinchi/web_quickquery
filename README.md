@@ -1,8 +1,8 @@
-# QuickDev (QuickQuery Web)
+# QuickQuery
 
 **[https://web-quickquery.vercel.app/](https://web-quickquery.vercel.app/)**
 
-**QuickDev**는 기존 C# WPF 애플리케이션인 QuickQuery를 **Next.js 14**, **Tailwind CSS**, **Shadcn/UI**를 사용하여 웹으로 포팅한 개발자 생산성 도구 모음입니다.
+**QuickQuery**는 기존 C# WPF 애플리케이션인 QuickQuery를 **Next.js 14**, **Tailwind CSS**, **Shadcn/UI**를 사용하여 웹으로 포팅한 개발자 생산성 도구 모음입니다.
 
 ## 🚀 주요 기능
 
@@ -30,22 +30,7 @@
 - **아이콘**: Lucide React
 - **배포**: Vercel
 
-## 📦 시작하기
-
-로컬에서 실행하려면 다음 명령어를 사용하세요:
-
-```bash
-npm run dev
-# 브라우저에서 http://localhost:3000 접속
-```
-
-## ☁️ 배포 (Vercel)
-
-이 프로젝트는 **Vercel** 배포에 최적화되어 있습니다.
-- **비용**: 개인 프로젝트(Hobby Plan)는 **무료**입니다.
-- **HTTPS**: 무료 SSL 인증서가 자동 적용됩니다.
-
-```bash
-npx vercel
-```
+## ☁️ 배포
+이 프로젝트는 **Vercel**을 통해 배포되었습니다.
+로컬 환경에서 실행하려면 `npm run dev` 명령어를 사용하세요.
 

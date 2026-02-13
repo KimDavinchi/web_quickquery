@@ -52,7 +52,7 @@ export default function Home() {
             </TabsTrigger>
             <TabsTrigger
               value="interpolator"
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
+              className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-400 hover:text-slate-100 transition-all"
             >
               Interpolator
             </TabsTrigger>

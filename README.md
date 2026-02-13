@@ -1,5 +1,7 @@
 # QuickDev (QuickQuery Web)
 
+**[https://web-quickquery.vercel.app/](https://web-quickquery.vercel.app/)**
+
 **QuickDev**는 기존 C# WPF 애플리케이션인 QuickQuery를 **Next.js 14**, **Tailwind CSS**, **Shadcn/UI**를 사용하여 웹으로 포팅한 개발자 생산성 도구 모음입니다.
 
 ## 🚀 주요 기능

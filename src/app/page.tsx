@@ -29,35 +29,74 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-8">
-        <Tabs defaultValue="in-clause" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 bg-slate-800/50 border border-slate-700/50 p-1 rounded-xl mb-6">
-            <TabsTrigger value="in-clause" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">IN-Clause</TabsTrigger>
-            <TabsTrigger value="crud" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">CRUD</TabsTrigger>
-            <TabsTrigger value="mapper" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">Model Mapper</TabsTrigger>
-            <TabsTrigger value="interpolator" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">Interpolator</TabsTrigger>
-          </TabsList>
+      {/* Layout Container */}
+      <div className="flex justify-center gap-4 px-4 py-8">
 
-          <TabsContent value="in-clause">
-            <InClauseBuilder />
-          </TabsContent>
+        {/* Left Ad (Desktop Only) */}
+        <aside className="hidden xl:block w-[160px] flex-shrink-0 sticky top-24 h-fit">
+          <AdSenseBanner
+            slotId={process.env.NEXT_PUBLIC_ADSENSE_SIDE_SLOT}
+            format="vertical"
+            style={{ width: "160px", height: "600px" }}
+            className="min-h-[600px]"
+          />
+        </aside>
 
-          <TabsContent value="crud">
-            <CrudGenerator />
-          </TabsContent>
+        {/* Main Content Area */}
+        <div className="flex-1 max-w-5xl w-full min-w-0 flex flex-col gap-6">
 
-          <TabsContent value="mapper">
-            <ModelMapper />
-          </TabsContent>
+          {/* Top Ad */}
+          <AdSenseBanner
+            slotId={process.env.NEXT_PUBLIC_ADSENSE_TOP_SLOT}
+            className="w-full min-h-[90px]"
+            style={{ width: "100%", height: "90px" }}
+          />
 
-          <TabsContent value="interpolator">
-            <QueryInterpolator />
-          </TabsContent>
-        </Tabs>
+          <Tabs defaultValue="in-clause" className="w-full">
+            <TabsList className="grid w-full grid-cols-4 bg-slate-800/50 border border-slate-700/50 p-1 rounded-xl mb-6">
+              <TabsTrigger value="in-clause" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">IN-Clause</TabsTrigger>
+              <TabsTrigger value="crud" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">CRUD</TabsTrigger>
+              <TabsTrigger value="mapper" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">Model Mapper</TabsTrigger>
+              <TabsTrigger value="interpolator" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">Interpolator</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="in-clause">
+              <InClauseBuilder />
+            </TabsContent>
+
+            <TabsContent value="crud">
+              <CrudGenerator />
+            </TabsContent>
+
+            <TabsContent value="mapper">
+              <ModelMapper />
+            </TabsContent>
+
+            <TabsContent value="interpolator">
+              <QueryInterpolator />
+            </TabsContent>
+          </Tabs>
+
+          {/* Bottom Ad */}
+          <AdSenseBanner
+            slotId={process.env.NEXT_PUBLIC_ADSENSE_BOTTOM_SLOT || process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_SLOT}
+            className="w-full min-h-[90px]"
+            style={{ width: "100%", height: "90px" }}
+          />
+
+        </div>
+        {/* End Main Content Area */}
+
+        {/* Right Ad (Desktop Only) */}
+        <aside className="hidden xl:block w-[160px] flex-shrink-0 sticky top-24 h-fit">
+          <AdSenseBanner
+            slotId={process.env.NEXT_PUBLIC_ADSENSE_SIDE_SLOT}
+            format="vertical"
+            style={{ width: "160px", height: "600px" }}
+            className="min-h-[600px]"
+          />
+        </aside>
       </div>
-
-      <AdSenseBanner />
 
       {/* Footer */}
       <footer className="border-t border-slate-700/50 mt-12">

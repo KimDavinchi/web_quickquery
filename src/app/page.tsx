@@ -48,8 +48,8 @@ export default function Home() {
           {/* Top Ad */}
           <AdSenseBanner
             slotId={process.env.NEXT_PUBLIC_ADSENSE_TOP_SLOT}
-            className="w-full min-h-[60px]"
-            style={{ width: "100%", height: "60px" }}
+            className="w-full min-h-[30px]"
+            style={{ width: "100%", height: "30px" }}
           />
 
           <Tabs defaultValue="in-clause" className="w-full">

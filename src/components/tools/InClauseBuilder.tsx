@@ -63,7 +63,10 @@ export function InClauseBuilder() {
                     <div className="space-y-3">
                         <label className="text-sm font-medium text-slate-300">Input (one value per line)</label>
                         <Textarea
-                            placeholder="123&#10;456&#10;789&#10;..."
+                            placeholder={`123
+456
+789
+...`}
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             className="h-64 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"

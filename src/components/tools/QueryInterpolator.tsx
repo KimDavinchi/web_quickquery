@@ -73,7 +73,9 @@ export function QueryInterpolator() {
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-slate-300">Parameters (one per line)</label>
                             <Textarea
-                                placeholder="123&#10;active&#10;..."
+                                placeholder={`123
+active
+2024-01-01`}
                                 value={paramsInput}
                                 onChange={(e) => setParamsInput(e.target.value)}
                                 className="h-28 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"

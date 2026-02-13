@@ -75,7 +75,10 @@ export function CrudGenerator() {
                         <div className="space-y-2">
                             <label className="text-sm font-medium text-slate-300">Columns (space/comma separated)</label>
                             <Textarea
-                                placeholder="id&#10;name&#10;email&#10;created_at"
+                                placeholder={`id
+name
+email
+created_at`}
                                 value={columnsInput}
                                 onChange={(e) => setColumnsInput(e.target.value)}
                                 className="h-44 bg-slate-950 border-slate-700 text-slate-100 font-mono text-sm placeholder:text-slate-400 resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"

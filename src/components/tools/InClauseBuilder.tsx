@@ -132,11 +132,11 @@ export function InClauseBuilder() {
                                 Convert
                             </Button>
                             <div className="flex gap-2">
-                                <Button variant="secondary" onClick={handleCopy} className="flex-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 border border-emerald-600/50">
-                                    <span className="mr-2">📋</span> Copy Result
-                                </Button>
                                 <Button variant="outline" onClick={handleClear} className="flex-1 border-slate-700 hover:bg-red-900/20 hover:text-red-400 hover:border-red-900/50 text-slate-400">
                                     <span className="mr-2">🗑️</span> Clear
+                                </Button>
+                                <Button variant="secondary" onClick={handleCopy} className="flex-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 border border-emerald-600/50">
+                                    <span className="mr-2">📋</span> Copy Result
                                 </Button>
                             </div>
                         </div>

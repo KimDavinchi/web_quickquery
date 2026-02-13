@@ -32,30 +32,10 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-6 py-8">
         <Tabs defaultValue="in-clause" className="w-full">
           <TabsList className="grid w-full grid-cols-4 bg-slate-800/50 border border-slate-700/50 p-1 rounded-xl mb-6">
-            <TabsTrigger
-              value="in-clause"
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
-            >
-              IN-Clause
-            </TabsTrigger>
-            <TabsTrigger
-              value="crud"
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
-            >
-              CRUD
-            </TabsTrigger>
-            <TabsTrigger
-              value="mapper"
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg transition-all"
-            >
-              Model Mapper
-            </TabsTrigger>
-            <TabsTrigger
-              value="interpolator"
-              className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-400 hover:text-slate-100 transition-all"
-            >
-              Interpolator
-            </TabsTrigger>
+            <TabsTrigger value="in-clause" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">IN-Clause</TabsTrigger>
+            <TabsTrigger value="crud" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">CRUD</TabsTrigger>
+            <TabsTrigger value="mapper" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">Model Mapper</TabsTrigger>
+            <TabsTrigger value="interpolator" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-slate-300 bg-slate-900/40 hover:bg-slate-800 hover:text-white transition-all border border-transparent data-[state=inactive]:border-slate-800">Interpolator</TabsTrigger>
           </TabsList>
 
           <TabsContent value="in-clause">

@@ -72,7 +72,10 @@ export function ModelMapper() {
                     <div className="space-y-3">
                         <label className="text-sm font-medium text-slate-300">Input (variable names)</label>
                         <Textarea
-                            placeholder="user_id&#10;created_at&#10;order_status&#10;..."
+                            placeholder={`user_id
+first_name
+email_address
+is_active`}
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             className="h-64 bg-slate-900/50 border-slate-600 text-slate-100 font-mono text-sm placeholder:text-slate-500 resize-none"
@@ -143,11 +146,11 @@ export function ModelMapper() {
                                 Convert
                             </Button>
                             <div className="flex gap-2">
-                                <Button variant="secondary" onClick={handleCopy} className="flex-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 border border-emerald-600/50">
-                                    <span className="mr-2">📋</span> Copy Result
-                                </Button>
                                 <Button variant="outline" onClick={handleClear} className="flex-1 border-slate-700 hover:bg-red-900/20 hover:text-red-400 hover:border-red-900/50 text-slate-400">
                                     <span className="mr-2">🗑️</span> Clear
+                                </Button>
+                                <Button variant="secondary" onClick={handleCopy} className="flex-1 bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600/30 border border-emerald-600/50">
+                                    <span className="mr-2">📋</span> Copy Result
                                 </Button>
                             </div>
                         </div>

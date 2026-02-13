@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "QuickDev",
+  title: "QuickQuery",
   description: "Developer Productivity Tools - SQL Builder, CRUD, Mapper, Interpolator",
 };
 

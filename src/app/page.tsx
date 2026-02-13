@@ -22,7 +22,7 @@ export default function Home() {
               <span className="text-white font-bold text-lg">Q</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-white">QuickDev</h1>
+              <h1 className="text-xl font-bold text-white">QuickQuery</h1>
               <p className="text-sm text-slate-400">Developer Productivity Tools</p>
             </div>
           </div>
@@ -48,8 +48,8 @@ export default function Home() {
           {/* Top Ad */}
           <AdSenseBanner
             slotId={process.env.NEXT_PUBLIC_ADSENSE_TOP_SLOT}
-            className="w-full min-h-[90px]"
-            style={{ width: "100%", height: "90px" }}
+            className="w-full min-h-[60px]"
+            style={{ width: "100%", height: "60px" }}
           />
 
           <Tabs defaultValue="in-clause" className="w-full">
@@ -101,7 +101,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-slate-700/50 mt-12">
         <div className="max-w-7xl mx-auto px-6 py-6 text-center text-slate-500 text-sm">
-          QuickDev © 2026 — Developer Productivity Tools
+          QuickQuery © 2026 — Developer Productivity Tools
         </div>
       </footer>
     </main>

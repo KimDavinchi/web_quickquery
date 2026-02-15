@@ -23,7 +23,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-white">QuickQuery</h1>
-              <p className="text-sm text-slate-400">Developer Productivity Tools</p>
+              <p className="text-sm text-slate-400">Essential Tools for SQL & Data Development</p>
             </div>
           </div>
         </div>

@@ -16,14 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "QuickQuery - 개발자 쿼리 보조 도구",
+    default: "QuickQuery - Developer SQL & Data Tools",
     template: "%s | QuickQuery",
   },
-  description: "개발자를 위한 쿼리 도움, SQL 생성, 모델 매핑, 쿼리 변환 도구 모음. 엑셀 IN절 변환, CRUD 쿼리 생성, C# 모델 매핑을 지원합니다.",
-  keywords: ["QuickQuery", "쿼리 도움", "쿼리 보조", "SQL 생성", "개발자 도구", "In절 생성", "CRUD 생성", "쿼리 변환"],
+  description: "Free developer productivity tools: SQL In-Clause Generator, CRUD Builder, C# Model Mapper, and Query Interpolator. Boost your coding speed.",
+  keywords: ["QuickQuery", "SQL Builder", "In-Clause Generator", "CRUD Generator", "Model Mapper", "Query Interpolator", "Developer Tools", "SQL Tools"],
   openGraph: {
-    title: "QuickQuery - 쿼리 작성 및 변환 보조 도구",
-    description: "개발자를 위한 쿼리 도움 및 생산성 향상 도구. 복잡한 SQL 작업을 쉽고 빠르게 해결하세요.",
+    title: "QuickQuery - Developer SQL & Data Tools",
+    description: "Boost your productivity with minimal, fast developer tools. SQL, CRUD, Mapper, and more.",
     type: "website",
   },
   other: {

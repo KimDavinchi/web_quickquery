@@ -162,6 +162,38 @@ created_at`}
                         />
                     </div>
                 </div>
+                {/* How to Use */}
+                <div className="mt-8 pt-6 border-t border-slate-700/50">
+                    <h3 className="text-white font-semibold text-sm mb-4">📖 How to Use the CRUD SQL Builder</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 1</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Enter table &amp; columns</div>
+                            <div className="text-slate-500 text-xs">Type the table name and paste column names (one per line, or space/comma separated). You can copy column names directly from SQL Management Studio or DBeaver.</div>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 2</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Select query type &amp; style</div>
+                            <div className="text-slate-500 text-xs">Pick SELECT, INSERT, UPDATE, or DELETE. Choose parameter style: <code className="text-green-400 bg-slate-950 px-1 rounded">@param</code> for SQL Server / MySQL, or <code className="text-green-400 bg-slate-950 px-1 rounded">:param</code> for Oracle / PostgreSQL.</div>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 3</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Generate &amp; Copy</div>
+                            <div className="text-slate-500 text-xs">Click Generate to produce a ready-to-use SQL template. Copy the result into your IDE or query tool and replace parameter placeholders with real values.</div>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-slate-400 text-xs font-semibold mb-2">📥 Example Input</div>
+                            <div className="text-slate-500 text-xs mb-1">Table: <code className="text-slate-300">users</code> &nbsp;|&nbsp; Columns:</div>
+                            <pre className="text-slate-300 font-mono text-xs leading-relaxed">{`id\nusername\nemail\ncreated_at`}</pre>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-slate-400 text-xs font-semibold mb-2">📤 Example Output (INSERT, @param)</div>
+                            <pre className="text-green-400 font-mono text-xs leading-relaxed">{`INSERT INTO users\n  (username, email, created_at)\nVALUES\n  (@username, @email, @created_at)`}</pre>
+                        </div>
+                    </div>
+                </div>
             </CardContent>
         </Card>
     );

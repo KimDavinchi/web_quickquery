@@ -153,6 +153,42 @@ export function InClauseBuilder() {
                         />
                     </div>
                 </div>
+                {/* How to Use */}
+                <div className="mt-8 pt-6 border-t border-slate-700/50">
+                    <h3 className="text-white font-semibold text-sm mb-4">📖 How to Use the IN-Clause Generator</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 1</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Paste your values</div>
+                            <div className="text-slate-500 text-xs">Copy a column from Excel, a list of IDs from a database result, or any newline-separated text and paste into the Input field.</div>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 2</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Choose options</div>
+                            <div className="text-slate-500 text-xs">Enable/disable quotes for string values. Select comma or pipe separator. Enable Oracle 1000-row split for large datasets.</div>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 3</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Convert &amp; Copy</div>
+                            <div className="text-slate-500 text-xs">Click Convert, then Copy Result. Paste directly into your SQL WHERE clause: <code className="text-green-400 bg-slate-950 px-1 rounded">WHERE id IN (...)</code></div>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-slate-400 text-xs font-semibold mb-2">📥 Example Input</div>
+                            <pre className="text-slate-300 font-mono text-xs leading-relaxed">{`1001\n1002\n1003\n1004`}</pre>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-slate-400 text-xs font-semibold mb-2">📤 Example Output (with quotes)</div>
+                            <pre className="text-green-400 font-mono text-xs leading-relaxed">{`IN ('1001', '1002', '1003', '1004')`}</pre>
+                        </div>
+                    </div>
+                    <div className="mt-4 p-3 bg-blue-900/20 border border-blue-800/30 rounded-lg">
+                        <p className="text-blue-300 text-xs">
+                            <strong>Oracle 1000-row limit:</strong> Oracle Database limits the IN clause to 1000 values. Enable the &quot;Oracle 1000 split&quot; option to automatically split large lists into multiple IN clauses joined with OR.
+                        </p>
+                    </div>
+                </div>
             </CardContent>
         </Card>
     );

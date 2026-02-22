@@ -167,6 +167,37 @@ is_active`}
                         />
                     </div>
                 </div>
+                {/* How to Use */}
+                <div className="mt-8 pt-6 border-t border-slate-700/50">
+                    <h3 className="text-white font-semibold text-sm mb-4">📖 How to Use the C# Model Mapper</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 1</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Paste column names</div>
+                            <div className="text-slate-500 text-xs">Paste SQL column names (snake_case) or C# property names (PascalCase), one per line. These typically come from a <code className="text-green-400 bg-slate-950 px-1 rounded">SELECT</code> result or model class.</div>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 2</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Choose direction &amp; options</div>
+                            <div className="text-slate-500 text-xs">Select <strong className="text-slate-300">→ PascalCase</strong> to convert SQL columns to C# properties, or <strong className="text-slate-300">→ snake_case</strong> for the reverse. Optionally enable full C# property declaration with a data type.</div>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-blue-400 font-bold text-xs mb-1">STEP 3</div>
+                            <div className="text-slate-300 text-sm font-medium mb-1">Convert &amp; Copy</div>
+                            <div className="text-slate-500 text-xs">Click Convert and copy the result. Paste the generated property names or declarations directly into your C# model class or DTO.</div>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-slate-400 text-xs font-semibold mb-2">📥 Input (snake_case SQL columns)</div>
+                            <pre className="text-slate-300 font-mono text-xs leading-relaxed">{`user_id\nfirst_name\nemail_address\nis_active`}</pre>
+                        </div>
+                        <div className="bg-slate-900/40 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-slate-400 text-xs font-semibold mb-2">📤 Output (C# properties, string type)</div>
+                            <pre className="text-green-400 font-mono text-xs leading-relaxed">{`public string UserId { get; set; }\npublic string FirstName { get; set; }\npublic string EmailAddress { get; set; }\npublic string IsActive { get; set; }`}</pre>
+                        </div>
+                    </div>
+                </div>
             </CardContent>
         </Card>
     );
